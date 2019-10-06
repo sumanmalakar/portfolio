@@ -1,0 +1,28 @@
+
+        .nav-item {
+            transform: translate3d(600px, 0, 0);
+             @include transition;
+
+        &.show {
+            //Slide in from right
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    .nav-link{
+        display: inline-block;
+        position: relative;
+        font-size: 30px;
+        text-decoration: uppercase;
+        padding:1rem 0;
+        font-weight:300;
+        text-decoration: none;
+        @include transition;
+    }
+}
+ 
+// Delay each nav item slide by 0.1s
+
+@for $x from 1 through 4 {
+    .nav-item:nth-child(#{$x}) {
+        transition-delay: $x * 0.1s;
+    }
