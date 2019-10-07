@@ -1,10 +1,16 @@
 //Widescreens
 @include mediaXl{
+    .projects{
+        grid-template-columns: repeat(4, 1fr);
+    }
 
 }
 
 // Desktops & Laptops
 @include mediaLg {
+    .projects{
+        grid-template-columns: repeat(3, 1fr);
+    }
 
 }
 
@@ -44,6 +50,9 @@ main{
             height:150px;
         }
     }
+    .projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .menu-nav{
@@ -67,5 +76,8 @@ main{
     
         }
     
+    }
+    .projects{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
